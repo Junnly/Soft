@@ -5,6 +5,8 @@ private int id;
 private String name;
 private float salary;
 
+public String toString(){return id+" "+name+" "+salary;}
+
 public int getId() {
 	return id;
 }

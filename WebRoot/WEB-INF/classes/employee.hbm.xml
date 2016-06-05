@@ -12,5 +12,7 @@
           <property name="name"></property>
           <property name="salary"></property>
           </class>
-          
+
+    
+<!--- <注释  > -->          
           </hibernate-mapping>

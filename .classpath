@@ -14,6 +14,7 @@
 	<classpathentry kind="con" path="melibrary.com.genuitec.eclipse.springframework.MYECLIPSE_SPRING25_WEB"/>
 	<classpathentry kind="con" path="melibrary.com.genuitec.eclipse.struts2.MYECLIPSE_STRUTS21_CORE"/>
 	<classpathentry kind="con" path="melibrary.com.genuitec.eclipse.struts2.MYECLIPSE_STRUTS21_SPRING"/>
+	<classpathentry kind="con" path="melibrary.com.genuitec.eclipse.struts2.MYECLIPSE_STRUTS21_TILES"/>
 	<classpathentry kind="lib" path="mysql-connector-java-5.1.6-bin.jar"/>
 	<classpathentry kind="output" path="WebRoot/WEB-INF/classes"/>
 </classpath>

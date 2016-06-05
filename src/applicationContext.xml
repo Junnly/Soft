@@ -19,6 +19,8 @@
 		<property name="mappingResources">
 		<list>
 		<value>employee.hbm.xml</value>
+		<value>Student.hbm.xml</value>
+		<value>Passwd.hbm.xml</value>
 		</list>
 		</property>
 		
@@ -41,7 +43,7 @@
 	</bean>
 	
 	<bean id="login" class="mypack.Login">
-	<property name="message" value="Welcome Spring"></property>
+<!--	<property name="message" value="Welcome Spring"></property> -->
 	</bean>
 	
 	</beans>

@@ -4,13 +4,12 @@
           "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
 
           <hibernate-mapping>
-          <class name="com.javatpoint.Employee" table="emp599">
-          <id name="id">
-          <generator class="assigned"></generator>
+          <class name="com.table.Passwd" table="passwd">
+          <id name="UserName">
           </id>
           
-          <property name="name"></property>
-          <property name="salary"></property>
+          <property name="Pwd"></property>
+          <property name="Level"></property>
           </class>
 
     

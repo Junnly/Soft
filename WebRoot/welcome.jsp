@@ -2,3 +2,4 @@
 
 Welcome, <s:property value="userName"/><br/>
 ${message} 
+
