@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+                                   "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+ <class name="mine.table.Professor" table="professor">
+		<id name="PID"> </id>
+  <property name="PSSN"></property>
+  <property name="PName"></property>
+  <property name="PBirthday"></property>
+  <property name="PStatus"></property>
+  <property name="DepartmentID"></property>
+  <property name="PPwd"></property>
+ </class>
+</hibernate-mapping>

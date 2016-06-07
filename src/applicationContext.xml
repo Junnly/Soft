@@ -18,9 +18,12 @@
 		
 		<property name="mappingResources">
 		<list>
-		<value>employee.hbm.xml</value>
-		<value>Student.hbm.xml</value>
-		<value>Passwd.hbm.xml</value>
+		<value>Professor.hbm.xml</value>	
+		<value>Course.hbm.xml</value>	
+		<value>Courses.hbm.xml</value>	
+		<value>Registrar.hbm.xml</value>	
+		<value>Department.hbm.xml</value>	
+		<value>Choose.hbm.xml</value>			
 		</list>
 		</property>
 		
@@ -38,12 +41,12 @@
 	<property name="sessionFactory" ref="mysessionFactory"></property>
 	</bean>
 	
-	<bean id="d" class="com.javatpoint.EmployeeDao">
+<!--	<bean id="d" class="com.javatpoint.EmployeeDao">
 	<property name="template" ref="template"></property>
 	</bean>
-	
+
 	<bean id="login" class="mypack.Login">
-<!--	<property name="message" value="Welcome Spring"></property> -->
+	<property name="message" value="Welcome Spring"></property> 
 	</bean>
-	
+-->		
 	</beans>

@@ -1,12 +1,16 @@
 package com.javatpoint;
 
 import java.util.Map;
+
+import mine.table.Registrar;
+
 import org.apache.struts2.dispatcher.SessionMap;
 import org.apache.struts2.interceptor.SessionAware;
 
 public class Login implements SessionAware{
 private String username,userpass;
 SessionMap<String,String> sessionmap;
+private Registrar regiatrar;
 
 public String getUsername() {
 	return username;
@@ -35,7 +39,8 @@ public String execute(){
 
 public void setSession(Map map) {
 	sessionmap=(SessionMap)map;
-	sessionmap.put("login","true");
+	//sessionmap.put("login","true");
+	sessionmap.put("RID",username);
 }
 
 public String logout(){
