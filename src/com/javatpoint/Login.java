@@ -2,34 +2,15 @@ package com.javatpoint;
 
 import java.util.Map;
 
-import mine.table.Registrar;
-
 import org.apache.struts2.dispatcher.SessionMap;
 import org.apache.struts2.interceptor.SessionAware;
 
 public class Login implements SessionAware{
-private String username,userpass;
+private String SID,SPwd;
 SessionMap<String,String> sessionmap;
-private Registrar regiatrar;
-
-public String getUsername() {
-	return username;
-}
-
-public void setUsername(String username) {
-	this.username = username;
-}
-
-public String getUserpass() {
-	return userpass;
-}
-
-public void setUserpass(String userpass) {
-	this.userpass = userpass;
-}
 
 public String execute(){
-	if(LoginDao.validate(username, userpass)){
+	if(LoginDao.validate(SID, SPwd)){
 		return "success";
 	}
 	else{
@@ -37,10 +18,26 @@ public String execute(){
 	}
 }
 
+public String getSID() {
+	return SID;
+}
+
+public void setSID(String sID) {
+	SID = sID;
+}
+
+public String getSPwd() {
+	return SPwd;
+}
+
+public void setSPwd(String sPwd) {
+	SPwd = sPwd;
+}
+
 public void setSession(Map map) {
 	sessionmap=(SessionMap)map;
 	//sessionmap.put("login","true");
-	sessionmap.put("RID",username);
+	sessionmap.put("SID",SID);
 }
 
 public String logout(){

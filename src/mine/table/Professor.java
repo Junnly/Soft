@@ -5,6 +5,12 @@ public class Professor {
 	private String PSSN;
 	private String PName;
 	private String PBirthday;
+	private String PStatus;
+	private String DepartmentID;
+	private String PPwd;
+	public String toString(){
+		return PID+"\t"+PSSN+"\t"+PName+"\t"+PBirthday+"\t"+PStatus+"\t"+DepartmentID+"\t"+PPwd;
+	}
 	public Professor(){}
 	public Professor(String pID, String pSSN, String pName, String pBirthday,
 			String pStatus, String departmentID, String pPwd) {
@@ -59,7 +65,4 @@ public class Professor {
 	public void setPPwd(String pPwd) {
 		PPwd = pPwd;
 	}
-	private String PStatus;
-	private String DepartmentID;
-	private String PPwd;
 }

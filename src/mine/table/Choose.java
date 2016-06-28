@@ -1,6 +1,6 @@
 package mine.table;
 
-public class Choose {
+public class Choose implements java.io.Serializable{
 	private String SID;
 	private String CID;
 	private String Grade;
@@ -28,5 +28,8 @@ public class Choose {
 	}
 	public void setGrade(String grade) {
 		Grade = grade;
+	}
+	public String toString(){
+		return SID+"\t"+CID+"\t"+Grade;
 	}
 }

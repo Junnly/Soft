@@ -7,9 +7,10 @@ import mine.table.Course;
 import mine.table.Student;
 
 public interface StudentView {
-	public Student login();
-	public void updateStudent();
-	public List<Course> getCatalog();
-	public void chooseCourse();	//addChoose();
-	public List<Choose> viewReport();//getChoose();
+	public String login();
+	public String updateStudent();
+	public String getCatalog();
+	public String chooseCourse();	//addChoose();
+	public String viewReport();//getChoose();
+	public String menu();
 }

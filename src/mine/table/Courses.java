@@ -29,4 +29,7 @@ public class Courses {
 	public void setCost(String cost) {
 		Cost = cost;
 	}
+	public String toString(){
+		return CourseID+"\t"+CourseName+"\t"+Cost;
+	}
 }

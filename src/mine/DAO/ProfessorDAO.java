@@ -2,15 +2,17 @@ package mine.DAO;
 
 import java.util.List;
 
+import mine.table.Choose;
 import mine.table.Course;
 import mine.table.Professor;
 import mine.table.Student;
 
 public interface ProfessorDAO {
-	public Professor login();
-	public void updateProfessor();
+	public Professor login(String PID);
+	public void updateProfessor(String PID, String PSSN, String pName, String pBirthday,
+			String pStatus, String departmentID, String PPwd);
 	public List<Course> getCatalog();
-	public void selectCourse();//setCourse();
-	public void submitGrade();//setChoose();
-	public List<Student> getRoster();
+	public void selectCourse(String CID,String PID);//setCourse();
+	public void submitGrade(String SID,String CID,String Grade);//setChoose();
+	public List<Choose> getRoster(String CID);
 }

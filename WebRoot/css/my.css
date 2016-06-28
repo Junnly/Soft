@@ -1,0 +1,23 @@
+#mainframe{
+	width:100%;
+	min-height:800px;
+}
+.col-xs-4{
+padding-top:0.5em;
+padding-bottom:0.5em;
+width:100%;
+}
+#back-to-top{
+ position:fixed;
+ bottom:50px;
+ right:0px;
+ border-radius: 5px 0px 0px 5px;
+ padding: 10px 12px;
+ background-color: #4c4c4c;
+ color:#dddddd;
+ text-align:center;
+ font-size: 16px;
+}
+table th tr td{
+text-align:center;
+}

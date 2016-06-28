@@ -3,8 +3,10 @@
                                    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
 <hibernate-mapping>
  <class name="mine.table.Choose" table="Choose">
-  <id name="SID"> </id>
-  <property name="CID"></property>
+  <composite-id>
+  	<key-property name = "SID" column ="SID" />
+  	<key-property name = "CID" column ="CID" />
+  </composite-id>
   <property name="Grade"></property>
  </class>
  

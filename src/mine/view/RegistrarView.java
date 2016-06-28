@@ -8,20 +8,23 @@ import mine.table.Registrar;
 import mine.table.Student;
 
 public interface RegistrarView {
-	public Registrar login();
+	public String login();
 	
-	public void addStudent();
-	public void addProfessor();
+	public String addStudent();
+	public String addProfessor();
 	
-	public void updateProfessor();
-	public void updateStudent();
+	public String updateProfessor();
+	public String updateStudent();
 	
-	public void delStudent();
-	public void delProfessor();
+	public String delStudent();
+	public String delProfessor();
 	
-	public List<Student> getStudents();
-	public List<Professor> getProfessor();
+	public String getStudents();
+	public String getProfessor();
 	
-	public List<Choose> getRegisterStatus();
-	public void closeRegister();//set IsRegisting
+	public String getRegisterStatus();
+	
+	public String menu();
+	
+	public String closeRegister();//set IsRegisting
 }

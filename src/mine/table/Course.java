@@ -37,4 +37,7 @@ public class Course {
 	public void setTimeArray(String timeArray) {
 		TimeArray = timeArray;
 	}
+	public String toString(){
+		return CID+"\t"+CourseID+"\t"+PID+"\t"+TimeArray;
+	}
 }

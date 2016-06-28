@@ -12,10 +12,11 @@ import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 public class LoginDao {
-
-	public static void main(String[] args){
-		validate("1","111");
-	}
+//	ต๗สิด๚ย๋
+//	public static void main(String[] args){
+//		validate("1","111");
+//	}
+	@SuppressWarnings("unchecked")
 	public static boolean validate(String username,String userpass){
 		boolean status=false;
 		ApplicationContext context = new ClassPathXmlApplicationContext("applicationContext.xml");  
@@ -30,7 +31,6 @@ public class LoginDao {
 	    if(!registrar.isEmpty()){
 	    	status = true;
 	    }
-	    System.out.println(status);
 		return status;
 	}
 }

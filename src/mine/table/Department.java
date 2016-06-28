@@ -21,4 +21,7 @@ public class Department {
 	public void setDepartmentName(String departmentName) {
 		DepartmentName = departmentName;
 	}
+	public String toString(){
+		return DepartmentID+"\t"+DepartmentName;
+	}
 }

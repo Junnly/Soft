@@ -3,16 +3,138 @@
 <struts>
 <package name="abc" extends="struts-default">
 
-<action name="login">
-<result >login.jsp</result>
+<action name="student">
+<result >slogin.jsp</result>
+</action>
+<action name="professor">
+<result >plogin.jsp</result>
+</action>
+<action name="registrar">
+<result >rlogin.jsp</result>
 </action>
 
-<action name="loginprocess" class="com.javatpoint.Login">
-<result name="success"  >loginsuccess.jsp</result>
+<action name="courseRecords" class="mine.view.StudentViewlmpl" method="getCourseRecords">
+<result name="success"  >/WEB-INF/sview/courseRecords.jsp</result>
+</action>
+
+
+<action name="sview" class="mine.view.StudentViewlmpl">
+<result  type ="redirect" name="success"  >smenu</result>
 <result name="error" >loginerror.jsp</result>
 </action>
 
-<action name="logout" class="com.javatpoint.Login" method="logout">
+<action name="smenu" class="mine.view.StudentViewlmpl" method="menu">
+<result name="success"  >/WEB-INF/sview/list.jsp</result>
+<result name="error" >loginerror.jsp</result>
+</action>
+
+<action name="seditstudent" class="mine.view.StudentViewlmpl">
+<result name="success"  >/WEB-INF/sview/updatestudent.jsp</result>
+<result name="error" >loginerror.jsp</result>
+</action>
+
+<action name="supdatestudent" class="mine.view.StudentViewlmpl" method="updateStudent">
+<result  type ="redirect" name="success"  >smenu</result>
+<result name="error" >loginerror.jsp</result>
+</action>
+
+<action name="pview" class="mine.view.ProfessorViewlmpl">
+<result  type ="redirect" name="success"  >pmenu</result>
+<result name="error" >loginerror.jsp</result>
+</action>
+
+<action name="pmenu" class="mine.view.ProfessorViewlmpl" method="menu">
+<result name="success"  >/WEB-INF/pview/list.jsp</result>
+<result name="error" >loginerror.jsp</result>
+</action>
+
+<action name="pgetroster" class="mine.view.ProfessorViewlmpl" method="getRoster">
+<result name="success"  >/WEB-INF/pview/roster.jsp</result>
+<result name="error" >loginerror.jsp</result>
+</action>
+
+<action name="psubmitgrade" class="mine.view.ProfessorViewlmpl" method="submitGrade">
+<result  type ="redirect" name="success"  >pgetroster?CID=${CID};PID=${PID}</result>
+<result name="error" >loginerror.jsp</result>
+</action>
+
+
+<action name="peditprofessor" class="mine.view.ProfessorViewlmpl">
+<result name="success"  >/WEB-INF/pview/updateprofessor.jsp</result>
+<result name="error" >loginerror.jsp</result>
+</action>
+
+<action name="pupdateprofessor" class="mine.view.ProfessorViewlmpl" method="updateProfessor">
+<result  type ="redirect" name="success"  >pmenu</result>
+<result name="error" >loginerror.jsp</result>
+</action>
+
+<action name="rview" class="mine.view.RegistrarViewlmpl">
+<result  type ="redirect" name="success"  >menu</result>
+<result name="error" >loginerror.jsp</result>
+</action>
+
+<action name="menu" class="mine.view.RegistrarViewlmpl"  method="menu">
+<result name="success"  >/WEB-INF/rview/list.jsp</result>
+<result name="error" >loginerror.jsp</result>
+</action>
+
+<action name="editstudent" class="mine.view.RegistrarViewlmpl">
+<result name="success"  >/WEB-INF/rview/editstudent.jsp</result>
+<result name="error" >loginerror.jsp</result>
+</action>
+
+<action name="updatestudent" class="mine.view.RegistrarViewlmpl" method="updateStudent">
+<result  type ="redirect" name="success"  >menu</result>
+<result name="error" >loginerror.jsp</result>
+</action>
+
+<action name="editnewstudent" class="mine.view.RegistrarViewlmpl">
+<result name="success"  >/WEB-INF/rview/editnewstudent.jsp</result>
+<result name="error" >loginerror.jsp</result>
+</action>
+
+<action name="addstudent" class="mine.view.RegistrarViewlmpl" method="addStudent">
+<result  type ="redirect" name="success"  >menu</result>
+<result name="error" >loginerror.jsp</result>
+</action>
+
+<action name="editprofessor" class="mine.view.RegistrarViewlmpl">
+<result name="success"  >/WEB-INF/rview/editprofessor.jsp</result>
+<result name="error" >loginerror.jsp</result>
+</action>
+
+<action name="updateprofessor" class="mine.view.RegistrarViewlmpl" method="updateProfessor">
+<result  type ="redirect" name="success"  >menu</result>
+<result name="error" >loginerror.jsp</result>
+</action>
+
+<action name="editnewprofessor" class="mine.view.RegistrarViewlmpl">
+<result name="success"  >/WEB-INF/rview/editnewprofessor.jsp</result>
+<result name="error" >loginerror.jsp</result>
+</action>
+
+<action name="addprofessor" class="mine.view.RegistrarViewlmpl" method="addProfessor">
+<result  type ="redirect" name="success"  >menu</result>
+<result name="error" >loginerror.jsp</result>
+</action>
+
+<action name="sloginprocess" class="mine.view.StudentViewlmpl" method="login">
+<result  type ="redirect" name="success"  >smenu</result>
+<result  type ="redirect" name="error"  >error.jsp</result>
+</action>
+
+<action name="ploginprocess" class="mine.view.ProfessorViewlmpl" method="login">
+<result  type ="redirect" name="success"  >pmenu</result>
+<result name="error" >loginerror.jsp</result>
+</action>
+
+<action name="rloginprocess" class="mine.view.RegistrarViewlmpl" method="login">
+<result  type ="redirect" name="success"  >menu</result>
+<result name="error" >loginerror.jsp</result>
+</action>
+
+<action name="logout" class="mine.control.LogOut" >
 <result name="success" >logoutsuccess.jsp</result>
 </action>
 
@@ -20,6 +142,8 @@
 <result name="success" >profilesuccess.jsp</result>
 <result name="error" >profileerror.jsp</result>
 </action>
+
+
 
 
 </package>

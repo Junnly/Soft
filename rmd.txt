@@ -1,0 +1,3 @@
+https://github.com/OOMMYY/Soft
+
+数据库结构与数据转储文件在mysql文件夹，创建数据库时名字为courseregis;root 密码：;(密码为空)

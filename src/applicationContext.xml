@@ -18,6 +18,7 @@
 		
 		<property name="mappingResources">
 		<list>
+		<value>Student.hbm.xml</value>
 		<value>Professor.hbm.xml</value>	
 		<value>Course.hbm.xml</value>	
 		<value>Courses.hbm.xml</value>	

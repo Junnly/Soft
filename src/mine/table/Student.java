@@ -7,6 +7,9 @@ public class Student {
 	private String SBirthday;
 	private String SStatus;
 	private String SGraduationDate;
+	public String toString(){
+		return SID+"\t"+SSSN+"\t"+SName+"\t"+SBirthday+"\t"+SStatus+"\t"+SGraduationDate;
+	}
 	public Student(){}
 	public Student(String sID, String sSSN, String sName, String sBirthday,
 			String sStatus, String sGraduationDate, String sPwd) {
